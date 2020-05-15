@@ -224,14 +224,9 @@ def process_signature(app, what: str, name: str, obj, options, signature,
             if not isinstance(method_object, (classmethod, staticmethod)):
                 del parameters[0]
 
-<<<<<<< HEAD
-    signature.signature = signature.signature.replace(
-        parameters=parameters, return_annotation=inspect.Signature.empty)
-=======
     signature = signature.replace(
         parameters=parameters,
         return_annotation=inspect.Signature.empty)
->>>>>>> a2d06c831ff4d145e31284e3fbf99a1a517afaf2
 
     return stringify_signature(signature).replace('\\', '\\\\'), None
 
