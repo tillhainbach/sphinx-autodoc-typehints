@@ -203,11 +203,7 @@ def process_signature(app, what: str, name: str, obj, options, signature, return
             if not isinstance(method_object, (classmethod, staticmethod)):
                 del parameters[0]
 
-<<<<<<< HEAD
-    signature = signature.replace(
-=======
     signature.signature = signature.signature.replace(
->>>>>>> f43d2c70890a63016dfffc8949db975e739dd1b0
         parameters=parameters,
         return_annotation=inspect.Signature.empty)
 
